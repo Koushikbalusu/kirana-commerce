@@ -20,18 +20,18 @@ All implementation decisions should reference the appropriate specification docu
 
 The Kirana Commerce System specification consists of the following documents.
 
-| Document | Purpose |
-|----------|---------|
-| vision.md | Project vision, mission and objectives |
-| business-rules.md | Business rules and operational logic |
-| user-roles.md | User roles, permissions and responsibilities |
-| functional-requirements.md | Functional system requirements |
-| non-functional-requirements.md | Quality attributes and engineering expectations |
-| tech-stack.md | Approved technologies and architecture decisions |
-| acceptance-criteria.md | Conditions required for feature and project completion |
-| mvp.md | Scope of Version 1.0 |
-| future-features.md | Planned future enhancements |
-| glossary.md | Business and technical terminology |
+| Document                       | Purpose                                                |
+| ------------------------------ | ------------------------------------------------------ |
+| vision.md                      | Project vision, mission and objectives                 |
+| business-rules.md              | Business rules and operational logic                   |
+| user-roles.md                  | User roles, permissions and responsibilities           |
+| functional-requirements.md     | Functional system requirements                         |
+| non-functional-requirements.md | Quality attributes and engineering expectations        |
+| tech-stack.md                  | Approved technologies and architecture decisions       |
+| acceptance-criteria.md         | Conditions required for feature and project completion |
+| mvp.md                         | Scope of Version 1.0                                   |
+| future-features.md             | Planned future enhancements                            |
+| glossary.md                    | Business and technical terminology                     |
 
 ---
 

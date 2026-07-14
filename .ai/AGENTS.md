@@ -30,7 +30,7 @@ Architecture discussion
 
 Architecture Agent
 
-------------------------
+---
 
 Implement Feature
 
@@ -38,7 +38,7 @@ Implement Feature
 
 Software Engineer
 
-------------------------
+---
 
 Database Schema
 
@@ -46,7 +46,7 @@ Database Schema
 
 Database Engineer
 
-------------------------
+---
 
 Documentation
 
@@ -54,7 +54,7 @@ Documentation
 
 Documentation Engineer
 
-------------------------
+---
 
 Review Existing Code
 
@@ -62,7 +62,7 @@ Review Existing Code
 
 Code Reviewer
 
-------------------------
+---
 
 UI Improvement
 

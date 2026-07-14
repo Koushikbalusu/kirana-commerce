@@ -119,7 +119,7 @@ Feature Added
 
 Update relevant docs
 
-----------------------
+---
 
 API Changed
 
@@ -127,7 +127,7 @@ API Changed
 
 Update API documentation
 
-----------------------
+---
 
 Database Changed
 
@@ -135,7 +135,7 @@ Database Changed
 
 Update schema documentation
 
-----------------------
+---
 
 Architecture Changed
 

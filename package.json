@@ -1,0 +1,42 @@
+{
+  "name": "kirana-commerce",
+  "version": "1.0.0",
+  "description": "A multilingual grocery ordering and delivery management platform built for Indian kirana stores.",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "prepare": "husky",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Koushikbalusu/kirana-commerce.git"
+  },
+  "keywords": [
+    "kirana",
+    "commerce",
+    "monorepo",
+    "nextjs",
+    "ecommerce",
+    "delivery"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Koushikbalusu/kirana-commerce/issues"
+  },
+  "homepage": "https://github.com/Koushikbalusu/kirana-commerce#readme",
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^17.0.8",
+    "prettier": "^3.9.5",
+    "prettier-plugin-tailwindcss": "^0.8.0"
+  },
+  "lint-staged": {
+    "*.{js,cjs,mjs,ts,tsx,css,json,md,yml,yaml,html}": "prettier --write"
+  }
+}
