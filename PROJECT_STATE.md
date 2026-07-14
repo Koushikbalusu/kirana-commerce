@@ -1,6 +1,6 @@
 # Project State
 
-**Current Phase:** Phase 4 — Environment & Configuration Completed
+**Current Phase:** Phase 5 — Database Infrastructure Completed
 
 ## Completed Work
 
@@ -32,6 +32,16 @@
   - Initialized the root `.env.example` following the Configuration Categories policy.
   - Exposed a completely type-safe singleton configuration API.
 
+- Phase 5: Database Infrastructure
+  - Scaffolded the `@kirana/database` package as the sole persistence abstraction.
+  - Installed `drizzle-orm`, `drizzle-kit`, and `@neondatabase/serverless`.
+  - Established strict structure (`client/`, `config/`, `schema/`, `migrations/`, `repositories/`, `views/`, `transactions/`, `seeds/`, `utils/`).
+  - Configured Drizzle Kit (`drizzle.config.ts`) pointing to `schema/index.ts`.
+  - Established a singleton database client optimized for Neon Serverless.
+  - Created a robust transaction propagation wrapper.
+  - Restructured `schema/` into `tables/`, `relations/`, and `enums/`.
+  - Consumed `DATABASE_URL` safely via `@kirana/config`.
+
 ## Next Phase
 
-- Phase 5: Database & ORM Setup
+- Phase 6: Core Business Modules (Users & Authentication)
