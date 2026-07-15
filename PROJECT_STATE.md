@@ -1,6 +1,6 @@
 # Project State
 
-**Current Phase:** Phase 15 — Notifications & Communication Completed
+**Current Phase:** Phase 16 — Customer & Customer Profiles Completed
 
 ## Completed Work
 
@@ -131,6 +131,15 @@
   - Designed omnichannel dynamic Routing aggregates incorporating channel prioritization, fallback routing, User Preferences (Quiet Hours, Category Opt-ins), and Critical bypasses.
   - Constructed decoupled `TemplateVersion` and `renderer` infrastructure supporting deterministic localization workflows and immutable snapshotting of rendered output preventing retrospective mutations.
   - Validated queue architecture blueprints enabling strict asynchronous processing to protect core domains from external API latency constraints.
+
+- Phase 16: Customer & Customer Profiles
+  - Scaffolded the `@kirana/customer` package utilizing Vertical Slice architecture (`profile`, `address`, `contact`, `wishlist`, `payment-ref`, `loyalty`, `notes`, `preference`, `metadata`, `privacy`, `timeline`, `avatar`, `segments`, `consent`, `audit`).
+  - Modeled `customer_profiles`, `customer_addresses`, `address_versions`, `customer_contacts`, `customer_wishlists`, `customer_wishlist_items`, `customer_payment_references`, `customer_loyalty_ledger`, `customer_notes`, `customer_metadata`, `customer_preferences`, and `customer_timeline` in `@kirana/database`.
+  - Strictly separated business profile concepts from Auth identity mechanisms, confirming Customer merely maps to `userId`.
+  - Implemented immutable `AddressVersion` ledgers assuring historical integrity despite UI-level address mutation affordances.
+  - Enforced a strictly append-only `LoyaltyLedger`, rejecting mutable point balances for high-integrity reward tracking architectures.
+  - Structured explicit Data Privacy and GDPR domains defining export and anonymization cascades preventing accidental PII retention.
+  - Introduced immutable Value Objects (`CustomerProfile`, `CustomerAddress`, `CustomerPreference`, `CustomerContact`, `LoyaltyBalance`, etc.) ensuring robust input sanitization across service boundaries.
 
 ## Next Phase
 

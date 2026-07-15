@@ -103,3 +103,18 @@ export * from './tables/notification_attachments';
 export * from './tables/notification_analytics';
 export * from './tables/notification_webhooks';
 export * from './relations/notifications';
+
+// Customers
+export * from './tables/customer_profiles';
+export * from './tables/customer_addresses';
+export * from './tables/address_versions';
+export * from './tables/customer_contacts';
+export * from './tables/customer_wishlists';
+export * from './tables/customer_wishlist_items';
+export * from './tables/customer_payment_references';
+export * from './tables/customer_loyalty_ledger';
+export * from './tables/customer_notes';
+export * from './tables/customer_metadata';
+export * from './tables/customer_preferences';
+export * from './tables/customer_timeline';
+export * from './relations/customers';
