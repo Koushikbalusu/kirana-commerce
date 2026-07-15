@@ -1,6 +1,5 @@
 import { pgTable, text, timestamp, index } from 'drizzle-orm/pg-core';
 import { orders } from './orders';
-import { fulfillmentStatusEnum } from '../enums/orders';
 
 export const fulfillments = pgTable(
   'fulfillments',
@@ -11,9 +10,8 @@ export const fulfillments = pgTable(
     orderId: text('order_id')
       .notNull()
       .references(() => orders.id, { onDelete: 'cascade' }),
-    trackingNumber: text('tracking_number'),
-    carrier: text('carrier'),
-    status: fulfillmentStatusEnum('status').default('UNFULFILLED').notNull(),
+    warehouseId: text('warehouse_id').notNull().default('default_warehouse'),
+    status: text('status').default('UNFULFILLED').notNull(), // e.g. UNFULFILLED, PROCESSING, FULFILLED
     createdAt: timestamp('created_at').defaultNow().notNull(),
     updatedAt: timestamp('updated_at').defaultNow().notNull(),
   },

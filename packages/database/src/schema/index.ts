@@ -66,3 +66,26 @@ export * from './tables/payments';
 export * from './tables/refunds';
 export * from './tables/webhook_events';
 export * from './relations/payments';
+
+// Shipping
+export * from './enums/shipping';
+export * from './tables/carriers';
+export * from './tables/carrier_configurations';
+export * from './tables/shipments';
+export * from './tables/shipment_attempts';
+export * from './tables/shipment_items';
+export * from './tables/tracking_events';
+export * from './tables/shipping_labels';
+export * from './tables/shipment_exceptions';
+export * from './tables/proof_of_deliveries';
+export * from './tables/carrier_webhooks';
+export * from './relations/shipping';
+
+// Search
+export * from './tables/search_indices';
+export * from './tables/search_documents';
+export * from './tables/search_suggestions';
+export * from './tables/search_synonyms';
+export * from './tables/search_analytics';
+export * from './tables/search_events';
+export * from './relations/search';

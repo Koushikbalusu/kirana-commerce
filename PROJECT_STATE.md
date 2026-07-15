@@ -1,6 +1,6 @@
 # Project State
 
-**Current Phase:** Phase 12 — Payments Completed
+**Current Phase:** Phase 14 — Search & Discovery Completed
 
 ## Completed Work
 
@@ -103,6 +103,25 @@
   - Separated Refund logic into an independent aggregate preventing mutations on finalized payment ledgers.
   - Established the `ProviderAdapter` pattern to guarantee abstraction from third-party SDKs.
   - Ensured precision by structuring all monetary operations strictly on integers.
+
+- Phase 13: Shipping & Fulfillment
+  - Scaffolded the `@kirana/shipping` package utilizing Vertical Slice (`shipment`, `shipment-attempt`, `shipment-item`, `carrier`, `tracking`, `label`, `address`, `shared`).
+  - Modeled `carriers`, `carrier_configurations`, `shipments`, `shipment_attempts`, `shipment_items`, `tracking_events`, `shipping_labels`, `shipment_exceptions`, `proof_of_deliveries`, and `carrier_webhooks` in `@kirana/database`.
+  - Transitioned to a Lightweight Fulfillment aggregate, decoupling shipments from strict 1:1 order relationships (supporting future split shipments).
+  - Explicitly designed `ShipmentAttempt` tracking to capture failed carrier handovers securely.
+  - Structured strictly append-only `tracking_events` architecture preventing history overrides.
+  - Designed future-ready aggregates for Proof of Delivery and Exception handling.
+  - Constructed abstract Carrier Adapter definitions preparing for integration with BlueDart, Delhivery, FedEx without polluting business layers.
+  - Permanently snapshotted shipping addresses upon shipment creation avoiding retroactive address mutations from customer profile edits.
+
+- Phase 14: Search & Discovery
+  - Scaffolded the `@kirana/search` package utilizing Vertical Slice architecture isolating independent engines (`query-engine`, `index-engine`, `search`, `autocomplete`, `facet`, `ranking`, `spell-correction`, `synonyms`, `merchandising`, `cache`, `analytics`).
+  - Modeled `search_documents`, `search_indices`, `search_suggestions`, `search_synonyms`, `search_analytics`, and `search_events` in `@kirana/database`.
+  - Defined rigid, immutable Value Objects `SearchQuery` and `SearchResult` enforcing isolation from upstream HTTP contexts and downstream provider SDKs.
+  - Explicitly divided the domain into a latency-optimized stateless Query Engine and a throughput-optimized asynchronous Indexing Engine.
+  - Abstracted external search implementations via `SearchProviderAdapter` supporting zero-friction migration between Postgres FTS, Typesense, Elasticsearch, and Algolia.
+  - Engineered the logical Normalization Pipeline segregating spell correction, synonym expansion, tokenization, and stop-word removal into distinct execution phases.
+  - Scaffolding future-ready architecture for advanced vector-based hybrid search, personalized RAG implementations, and campaign-driven merchandising logic.
 
 ## Next Phase
 
