@@ -1,6 +1,6 @@
 # Project State
 
-**Current Phase:** Phase 6 — Authentication & Authorization (RBAC) Completed
+**Current Phase:** Phase 7 — Product Catalog Completed
 
 ## Completed Work
 
@@ -50,6 +50,15 @@
   - Enforced one-way dependency layers across packages.
   - Built generic RBAC evaluators (`hasPermission`, `getCurrentUser`) and session extraction layers.
 
+- Phase 7: Product Catalog
+  - Designed and scaffolding the `@kirana/catalog` package utilizing a feature-first Vertical Slice architecture (Product, Category, Brand, Variant).
+  - Designed and extended `@kirana/database` with `products`, `categories`, `brands`, `product_images`, `product_variants`, `product_attributes`, and `attribute_values` tables.
+  - Ensured no inventory or pricing fields leaked into the Catalog.
+  - Set up internal Repositories, DTO mappings, Zod input validation, and business logic Services.
+  - Implemented deterministic Slug generation.
+  - Prepared generic `ProductCreated`, `ProductPublished`, etc., events for future Search readiness.
+  - Maintained a strict Public API (Services, DTOs, and Validators only).
+
 ## Next Phase
 
-- Phase 7: Business Logic & Entities (Users, Products, Orders)
+- Phase 8: Inventory Management

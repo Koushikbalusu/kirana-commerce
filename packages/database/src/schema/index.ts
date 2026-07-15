@@ -6,3 +6,14 @@ export * from './tables/roles';
 export * from './tables/permissions';
 export * from './tables/role_permissions';
 export * from './tables/user_roles';
+
+// Catalog
+export * from './enums/catalog';
+export * from './tables/categories';
+export * from './tables/brands';
+export * from './tables/products';
+export * from './tables/product_images';
+export * from './tables/product_variants';
+export * from './tables/product_attributes';
+export * from './tables/attribute_values';
+export * from './relations/catalog';
