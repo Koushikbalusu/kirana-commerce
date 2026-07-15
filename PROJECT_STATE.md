@@ -1,6 +1,6 @@
 # Project State
 
-**Current Phase:** Phase 8 — Inventory Management Completed
+**Current Phase:** Phase 9 — Pricing & Promotions Completed
 
 ## Completed Work
 
@@ -67,6 +67,15 @@
   - Implemented strict Pessimistic Locking (`SELECT ... FOR UPDATE`) in `InventoryRepository` inside Service-managed transaction boundaries.
   - Prepared `InventoryReserved`, `InventoryReceived`, and other asynchronous Domain Event definitions for future scalability.
   - Excluded physical Catalog, Orders, Pricing dependencies entirely from the domain.
+
+- Phase 9: Pricing & Promotions
+  - Scaffolded the `@kirana/pricing` package utilizing Vertical Slice (`price`, `promotion`, `coupon`, `tax`, `currency`).
+  - Modeled `currencies`, `prices`, `price_history`, `promotions`, `promotion_conditions`, `promotion_actions`, `coupons`, and `tax_categories` in `@kirana/database`.
+  - Represented the `Money` concept internally (forcing integer precision calculations in smallest units).
+  - Designed a deterministic Price Resolution Pipeline that sequentially evaluates Base Price → Promotions → Coupons → Tax → Final Price.
+  - Structured immutable Append-Only `PriceHistory`.
+  - Implemented extensible condition-based rule engines for Promotions, leaving Prices themselves immutable.
+  - Outlined asynchronous Domain Event definitions for `PriceChanged`, `CouponRedeemed`, etc., preparing the ground for decoupled consumer integrations (Cart/Orders).
 
 ## Next Phase
 

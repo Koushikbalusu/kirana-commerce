@@ -15,6 +15,13 @@
       "when": 1784108743655,
       "tag": "0001_nervous_riptide",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1784110016724,
+      "tag": "0002_spicy_hercules",
+      "breakpoints": true
     }
   ]
 }
