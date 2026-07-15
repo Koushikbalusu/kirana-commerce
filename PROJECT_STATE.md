@@ -1,6 +1,6 @@
 # Project State
 
-**Current Phase:** Phase 7 — Product Catalog Completed
+**Current Phase:** Phase 8 — Inventory Management Completed
 
 ## Completed Work
 
@@ -59,6 +59,15 @@
   - Prepared generic `ProductCreated`, `ProductPublished`, etc., events for future Search readiness.
   - Maintained a strict Public API (Services, DTOs, and Validators only).
 
+- Phase 8: Inventory Management
+  - Scaffolded the `@kirana/inventory` package using the Vertical Slice pattern (`inventory`, `warehouse`, `reservation`, `movement`, `shared`).
+  - Modeled `warehouses`, `inventory`, `reservations`, `inventory_movements`, `stock_adjustments`, and `transfers` in `@kirana/database`.
+  - Implemented generic Reservation boundaries (owner agnostic).
+  - Ensured all stock mutations write to an immutable `InventoryMovement` ledger describing business events (`RECEIVED`, `SHIPPED`, `RESERVED`, etc.).
+  - Implemented strict Pessimistic Locking (`SELECT ... FOR UPDATE`) in `InventoryRepository` inside Service-managed transaction boundaries.
+  - Prepared `InventoryReserved`, `InventoryReceived`, and other asynchronous Domain Event definitions for future scalability.
+  - Excluded physical Catalog, Orders, Pricing dependencies entirely from the domain.
+
 ## Next Phase
 
-- Phase 8: Inventory Management
+- TBD

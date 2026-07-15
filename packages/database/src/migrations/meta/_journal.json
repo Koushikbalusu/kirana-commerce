@@ -8,6 +8,13 @@
       "when": 1784088500061,
       "tag": "0000_slim_blue_blade",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1784108743655,
+      "tag": "0001_nervous_riptide",
+      "breakpoints": true
     }
   ]
 }

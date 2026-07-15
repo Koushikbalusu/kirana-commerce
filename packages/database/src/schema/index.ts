@@ -17,3 +17,13 @@ export * from './tables/product_variants';
 export * from './tables/product_attributes';
 export * from './tables/attribute_values';
 export * from './relations/catalog';
+
+// Inventory
+export * from './enums/inventory';
+export * from './tables/warehouses';
+export * from './tables/inventory';
+export * from './tables/reservations';
+export * from './tables/inventory_movements';
+export * from './tables/stock_adjustments';
+export * from './tables/transfers';
+export * from './relations/inventory';
