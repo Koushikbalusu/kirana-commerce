@@ -1,6 +1,6 @@
 # Project State
 
-**Current Phase:** Phase 9 — Pricing & Promotions Completed
+**Current Phase:** Phase 10 — Shopping Cart Completed
 
 ## Completed Work
 
@@ -76,6 +76,15 @@
   - Structured immutable Append-Only `PriceHistory`.
   - Implemented extensible condition-based rule engines for Promotions, leaving Prices themselves immutable.
   - Outlined asynchronous Domain Event definitions for `PriceChanged`, `CouponRedeemed`, etc., preparing the ground for decoupled consumer integrations (Cart/Orders).
+
+- Phase 10: Shopping Cart
+  - Scaffolded the `@kirana/cart` package utilizing Vertical Slice (`cart`, `cart-item`, `cart-session`).
+  - Modeled `carts`, `cart_items`, and `cart_sessions` in `@kirana/database` ensuring purchase intent tracking separated from pricing/inventory.
+  - Enforced a deterministic Guest Merge Algorithm preserving cart contents across anonymous-to-authenticated transitions.
+  - Configured `CartValidationResult` (purchase feasibility) and `CartSnapshot` (financial view) as dynamically calculated runtime concepts.
+  - Guaranteed `cart_items` store strictly `variant_id` and `quantity` with no duplicated catalog definitions.
+  - Excluded Inventory reservation logics, preparing validation structures to be evaluated against actual stock states during the impending Checkout Phase.
+  - Prepared event definitions like `CartMerged`, `ItemAdded`, and `CouponApplied`.
 
 ## Next Phase
 

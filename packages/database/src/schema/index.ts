@@ -39,3 +39,10 @@ export * from './tables/promotion_actions';
 export * from './tables/coupons';
 export * from './tables/tax_categories';
 export * from './relations/pricing';
+
+// Cart
+export * from './enums/cart';
+export * from './tables/carts';
+export * from './tables/cart_items';
+export * from './tables/cart_sessions';
+export * from './relations/cart';

@@ -22,6 +22,13 @@
       "when": 1784110016724,
       "tag": "0002_spicy_hercules",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1784112997361,
+      "tag": "0003_slimy_smiling_tiger",
+      "breakpoints": true
     }
   ]
 }
