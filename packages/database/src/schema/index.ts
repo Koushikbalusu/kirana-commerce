@@ -89,3 +89,17 @@ export * from './tables/search_synonyms';
 export * from './tables/search_analytics';
 export * from './tables/search_events';
 export * from './relations/search';
+
+// Notifications
+export * from './tables/notification_providers';
+export * from './tables/notification_provider_configs';
+export * from './tables/notifications';
+export * from './tables/delivery_attempts';
+export * from './tables/notification_templates';
+export * from './tables/template_versions';
+export * from './tables/user_notification_preferences';
+export * from './tables/in_app_notifications';
+export * from './tables/notification_attachments';
+export * from './tables/notification_analytics';
+export * from './tables/notification_webhooks';
+export * from './relations/notifications';
