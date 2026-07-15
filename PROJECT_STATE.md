@@ -1,6 +1,6 @@
 # Project State
 
-**Current Phase:** Phase 5 — Database Infrastructure Completed
+**Current Phase:** Phase 6 — Authentication & Authorization (RBAC) Completed
 
 ## Completed Work
 
@@ -42,6 +42,14 @@
   - Restructured `schema/` into `tables/`, `relations/`, and `enums/`.
   - Consumed `DATABASE_URL` safely via `@kirana/config`.
 
+- Phase 6: Authentication & Authorization (RBAC)
+  - Scaffolded `@kirana/auth` and integrated Auth.js.
+  - Extended `@kirana/database` with Users, Accounts, Sessions, Roles, and Permissions schemas mapping exactly to the Auth.js Drizzle Adapter.
+  - Implemented Argon2id password hashing and database-backed sessions.
+  - Wired Next.js 16 Edge proxy interception securely to `@kirana/auth`.
+  - Enforced one-way dependency layers across packages.
+  - Built generic RBAC evaluators (`hasPermission`, `getCurrentUser`) and session extraction layers.
+
 ## Next Phase
 
-- Phase 6: Core Business Modules (Users & Authentication)
+- Phase 7: Business Logic & Entities (Users, Products, Orders)
