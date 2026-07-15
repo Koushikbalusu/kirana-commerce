@@ -55,3 +55,14 @@ export * from './tables/order_items';
 export * from './tables/order_status_history';
 export * from './tables/fulfillments';
 export * from './relations/orders';
+
+// Payments
+export * from './enums/payments';
+export * from './tables/payment_providers';
+export * from './tables/provider_configurations';
+export * from './tables/payment_intents';
+export * from './tables/payment_attempts';
+export * from './tables/payments';
+export * from './tables/refunds';
+export * from './tables/webhook_events';
+export * from './relations/payments';

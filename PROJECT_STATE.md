@@ -1,6 +1,6 @@
 # Project State
 
-**Current Phase:** Phase 11 — Orders Completed
+**Current Phase:** Phase 12 — Payments Completed
 
 ## Completed Work
 
@@ -94,6 +94,15 @@
   - Separated financial status (e.g., `UNPAID`, `PAID`) from fulfillment status (e.g., `UNFULFILLED`, `SHIPPED`) into independent tracked state machines.
   - Persisted JSONB snapshots inside the Order entity ensuring customer profile edits or address changes never retroactively alter historical invoices.
   - Maintained Service layer encapsulation executing complex transaction blocks directly against Repositories.
+
+- Phase 12: Payments
+  - Scaffolded the `@kirana/payments` package utilizing Vertical Slice (`payment`, `payment-intent`, `payment-attempt`, `refund`, `provider`, `webhook`, `reconciliation`).
+  - Modeled `payment_providers`, `provider_configurations`, `payment_intents`, `payment_attempts`, `payments`, `refunds`, and `webhook_events` in `@kirana/database`.
+  - Implemented `PaymentAttempt` as a first-class aggregate to track individual provider retries and isolated provider status from internal state.
+  - Enforced strict idempotency constraints via unique `idempotencyKey` tracking.
+  - Separated Refund logic into an independent aggregate preventing mutations on finalized payment ledgers.
+  - Established the `ProviderAdapter` pattern to guarantee abstraction from third-party SDKs.
+  - Ensured precision by structuring all monetary operations strictly on integers.
 
 ## Next Phase
 
