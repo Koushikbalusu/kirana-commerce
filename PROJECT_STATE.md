@@ -1,6 +1,6 @@
 # Project State
 
-**Current Phase:** Phase 10 — Shopping Cart Completed
+**Current Phase:** Phase 11 — Orders Completed
 
 ## Completed Work
 
@@ -85,6 +85,15 @@
   - Guaranteed `cart_items` store strictly `variant_id` and `quantity` with no duplicated catalog definitions.
   - Excluded Inventory reservation logics, preparing validation structures to be evaluated against actual stock states during the impending Checkout Phase.
   - Prepared event definitions like `CartMerged`, `ItemAdded`, and `CouponApplied`.
+
+- Phase 11: Orders
+  - Scaffolded the `@kirana/orders` package utilizing Vertical Slice (`order`, `order-item`, `checkout-session`, `fulfillment`).
+  - Modeled `orders`, `order_items`, `checkout_sessions`, `order_status_history`, and `fulfillments` in `@kirana/database` as immutable ledgers.
+  - Implemented `CheckoutSession` as the authoritative orchestrator preventing duplicate orders through idempotency keys.
+  - Constructed `OrderItem` to permanently snapshot external domain references (product names, pricing deductions) preserving historical accuracy.
+  - Separated financial status (e.g., `UNPAID`, `PAID`) from fulfillment status (e.g., `UNFULFILLED`, `SHIPPED`) into independent tracked state machines.
+  - Persisted JSONB snapshots inside the Order entity ensuring customer profile edits or address changes never retroactively alter historical invoices.
+  - Maintained Service layer encapsulation executing complex transaction blocks directly against Repositories.
 
 ## Next Phase
 

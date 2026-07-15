@@ -29,6 +29,13 @@
       "when": 1784112997361,
       "tag": "0003_slimy_smiling_tiger",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1784113669262,
+      "tag": "0004_regular_kid_colt",
+      "breakpoints": true
     }
   ]
 }

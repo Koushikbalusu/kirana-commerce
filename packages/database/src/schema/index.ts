@@ -46,3 +46,12 @@ export * from './tables/carts';
 export * from './tables/cart_items';
 export * from './tables/cart_sessions';
 export * from './relations/cart';
+
+// Orders
+export * from './enums/orders';
+export * from './tables/checkout_sessions';
+export * from './tables/orders';
+export * from './tables/order_items';
+export * from './tables/order_status_history';
+export * from './tables/fulfillments';
+export * from './relations/orders';
